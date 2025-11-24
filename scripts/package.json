@@ -1,0 +1,14 @@
+{
+  "name": "aquawatch-simulator",
+  "version": "1.0.0",
+  "description": "Script de simulation des capteurs IoT",
+  "main": "simulator.js",
+  "scripts": {
+    "start": "node simulator.js"
+  },
+  "dependencies": {
+    "mqtt": "^5.3.0",
+    "dotenv": "^16.3.1"
+  }
+}
+

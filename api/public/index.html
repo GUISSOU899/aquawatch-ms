@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaWatch-MS - Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sensor-data {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .updating {
+            opacity: 0.7;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        #measurements, #alerts {
+            transition: opacity 0.3s;
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .sensor-data {
+            margin-bottom: 15px;
+        }
+        
+        .sensor-data h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .sensor-data label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .sensor-data span {
+            color: #333;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .alert.critical {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert.warning {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+        
+        .refresh-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            background: #5568d3;
+        }
+        
+        .refresh-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .auto-refresh {
+            text-align: center;
+            margin: 20px 0;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .auto-refresh label {
+            color: white;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .auto-refresh input[type="checkbox"] {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .timestamp {
+            color: white;
+            font-size: 0.9em;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        
+        .map-container {
+            position: relative;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+        
+        .error {
+            color: red;
+            padding: 10px;
+            background: #ffe6e6;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌊 AquaWatch-MS Dashboard</h1>
+        
+        <div class="auto-refresh">
+            <button class="refresh-btn" id="refreshBtn" onclick="loadData()">🔄 Actualiser</button>
+            <label>
+                <input type="checkbox" id="autoRefresh" checked onchange="toggleAutoRefresh()">
+                Actualisation automatique (5s)
+            </label>
+            <span class="timestamp" id="lastUpdate">En attente...</span>
+        </div>
+        
+        <div class="grid">
+            <div class="card full-width">
+                <h2>🗺️ Carte des Capteurs</h2>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>📊 Dernières Mesures</h2>
+                <div id="measurements">
+                    <p class="loading">Chargement...</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>🚨 Alertes Récentes</h2>
+                <div id="alerts">
+                    <p class="loading">Chargement...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let autoRefreshInterval = null;
+        let map = null;
+        let markers = {};
+        
+        // Initialiser la carte Leaflet
+        function initMap() {
+            map = L.map('map').setView([46.6034, 1.8883], 6); // Centre de la France
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+        }
+        
+        // Mettre à jour les marqueurs sur la carte
+        function updateMap(measurements) {
+            if (!map) return;
+            
+            // Supprimer les anciens marqueurs
+            Object.values(markers).forEach(marker => {
+                map.removeLayer(marker);
+            });
+            markers = {};
+            
+            if (!measurements || measurements.length === 0) return;
+            
+            measurements.forEach(m => {
+                // Déterminer la couleur du marqueur selon l'état
+                let color = 'green';
+                if (m.ph < 6.5 || m.ph > 8.5 || m.turbidity > 5 || m.temperature < 0 || m.temperature > 30 || m.conductivity > 2500) {
+                    color = 'red';
+                } else if (m.ph < 6.8 || m.ph > 8.2 || m.turbidity > 3 || m.temperature < 5 || m.temperature > 25 || m.conductivity > 2000) {
+                    color = 'orange';
+                }
+                
+                // Créer le marqueur
+                const marker = L.marker([m.latitude, m.longitude], {
+                    icon: L.divIcon({
+                        className: 'custom-marker',
+                        html: `<div style="background-color: ${color}; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></div>`,
+                        iconSize: [20, 20],
+                        iconAnchor: [10, 10]
+                    })
+                }).addTo(map);
+                
+                // Ajouter un popup avec les informations du capteur
+                const popupContent = `
+                    <div style="min-width: 200px;">
+                        <h3 style="margin: 0 0 10px 0; color: #667eea;">${m.sensor_id}</h3>
+                        <table style="width: 100%; font-size: 0.9em;">
+                            <tr><td><strong>pH:</strong></td><td>${m.ph.toFixed(2)}</td></tr>
+                            <tr><td><strong>Température:</strong></td><td>${m.temperature.toFixed(2)}°C</td></tr>
+                            <tr><td><strong>Turbidité:</strong></td><td>${m.turbidity.toFixed(2)} NTU</td></tr>
+                            <tr><td><strong>Conductivité:</strong></td><td>${m.conductivity.toFixed(2)} µS/cm</td></tr>
+                            <tr><td><strong>Position:</strong></td><td>${m.latitude.toFixed(4)}, ${m.longitude.toFixed(4)}</td></tr>
+                            <tr><td><strong>Dernière mise à jour:</strong></td><td>${new Date(m.timestamp).toLocaleString()}</td></tr>
+                        </table>
+                    </div>
+                `;
+                marker.bindPopup(popupContent);
+                
+                markers[m.sensor_id] = marker;
+            });
+            
+            // Ajuster la vue pour afficher tous les marqueurs
+            if (measurements.length > 0) {
+                const bounds = measurements.map(m => [m.latitude, m.longitude]);
+                map.fitBounds(bounds, { padding: [50, 50] });
+            }
+        }
+        
+        let lastMeasurementsHash = '';
+        
+        async function loadData() {
+            const refreshBtn = document.getElementById('refreshBtn');
+            const originalText = refreshBtn.textContent;
+            const measurementsContainer = document.getElementById('measurements');
+            const alertsContainer = document.getElementById('alerts');
+            
+            refreshBtn.disabled = true;
+            refreshBtn.textContent = '⏳ Chargement...';
+            measurementsContainer.classList.add('updating');
+            alertsContainer.classList.add('updating');
+            
+            try {
+                // Ajouter un timestamp pour éviter le cache
+                const timestamp = new Date().getTime();
+                
+                // Charger les mesures
+                const measurementsRes = await fetch(`http://localhost:3000/latest-measurements?t=${timestamp}`, {
+                    cache: 'no-cache',
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    }
+                });
+                if (!measurementsRes.ok) {
+                    throw new Error(`HTTP error! status: ${measurementsRes.status}`);
+                }
+                const measurementsData = await measurementsRes.json();
+                
+                // Charger les alertes
+                const alertsRes = await fetch(`http://localhost:3000/alerts?limit=10&t=${timestamp}`, {
+                    cache: 'no-cache',
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    }
+                });
+                if (!alertsRes.ok) {
+                    throw new Error(`HTTP error! status: ${alertsRes.status}`);
+                }
+                const alertsData = await alertsRes.json();
+                
+                // Créer un hash des données pour détecter les changements
+                const currentHash = JSON.stringify(measurementsData.data);
+                const hasChanged = currentHash !== lastMeasurementsHash;
+                
+                if (hasChanged) {
+                    console.log('🔄 CHANGEMENT DÉTECTÉ dans les données !');
+                    lastMeasurementsHash = currentHash;
+                } else {
+                    console.log('⏸️ Aucun changement dans les données');
+                }
+                
+                console.log('✅ Données reçues:', { 
+                    measurements: measurementsData.data?.length || 0, 
+                    alerts: alertsData.data?.length || 0,
+                    timestamp: new Date().toLocaleTimeString(),
+                    changed: hasChanged
+                });
+                
+                if (measurementsData.data && measurementsData.data.length > 0) {
+                    console.log('📊 Première mesure:', measurementsData.data[0]);
+                    console.log('📊 Dernière mesure:', measurementsData.data[measurementsData.data.length - 1]);
+                }
+                
+                // Mettre à jour l'affichage
+                console.log('🔄 Mise à jour de l\'affichage...');
+                displayMeasurements(measurementsData.data || []);
+                displayAlerts(alertsData.data || []);
+                updateMap(measurementsData.data || []);
+                
+                const updateTime = new Date().toLocaleString();
+                document.getElementById('lastUpdate').textContent = 
+                    `Dernière mise à jour: ${updateTime}`;
+                console.log('✅ Affichage mis à jour à', updateTime);
+            } catch (error) {
+                console.error('Erreur:', error);
+                document.getElementById('measurements').innerHTML = 
+                    '<p class="error">❌ Erreur de connexion à l\'API: ' + error.message + '</p>';
+                document.getElementById('alerts').innerHTML = 
+                    '<p class="error">❌ Erreur de connexion à l\'API</p>';
+            } finally {
+                refreshBtn.disabled = false;
+                refreshBtn.textContent = originalText;
+                measurementsContainer.classList.remove('updating');
+                alertsContainer.classList.remove('updating');
+            }
+        }
+        
+        function displayMeasurements(measurements) {
+            const container = document.getElementById('measurements');
+            
+            if (!measurements || measurements.length === 0) {
+                container.innerHTML = '<p>Aucune mesure disponible</p>';
+                console.log('⚠️ Aucune mesure à afficher');
+                return;
+            }
+            
+            console.log(`📊 Affichage de ${measurements.length} mesure(s)`);
+            
+            let html = '';
+            measurements.forEach((m, index) => {
+                // Déterminer le statut
+                let status = '✅ Normal';
+                let statusColor = 'green';
+                if (m.ph < 6.5 || m.ph > 8.5 || m.turbidity > 5 || m.temperature < 0 || m.temperature > 30 || m.conductivity > 2500) {
+                    status = '🔴 Critique';
+                    statusColor = 'red';
+                } else if (m.ph < 6.8 || m.ph > 8.2 || m.turbidity > 3 || m.temperature < 5 || m.temperature > 25 || m.conductivity > 2000) {
+                    status = '⚠️ Attention';
+                    statusColor = 'orange';
+                }
+                
+                const timestamp = new Date(m.timestamp).toLocaleString();
+                console.log(`  ${index + 1}. ${m.sensor_id}: pH=${m.ph.toFixed(2)}, Temp=${m.temperature.toFixed(2)}°C, Timestamp=${timestamp}`);
+                
+                html += `
+                    <div class="sensor-data">
+                        <h3>📍 ${m.sensor_id} <span style="color: ${statusColor}; font-size: 0.8em;">${status}</span></h3>
+                        <div class="sensor-data">
+                            <label>pH:</label>
+                            <span>${m.ph.toFixed(2)}</span>
+                        </div>
+                        <div class="sensor-data">
+                            <label>Température:</label>
+                            <span>${m.temperature.toFixed(2)}°C</span>
+                        </div>
+                        <div class="sensor-data">
+                            <label>Turbidité:</label>
+                            <span>${m.turbidity.toFixed(2)} NTU</span>
+                        </div>
+                        <div class="sensor-data">
+                            <label>Conductivité:</label>
+                            <span>${m.conductivity.toFixed(2)} µS/cm</span>
+                        </div>
+                        <div class="sensor-data">
+                            <label>Position:</label>
+                            <span>${m.latitude.toFixed(4)}, ${m.longitude.toFixed(4)}</span>
+                        </div>
+                        <div class="sensor-data">
+                            <label>Dernière mise à jour:</label>
+                            <span style="font-size: 0.9em;">${timestamp}</span>
+                        </div>
+                    </div>
+                    <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
+                `;
+            });
+            
+            // Forcer la mise à jour du DOM avec animation
+            if (container.innerHTML === html) {
+                console.log('⚠️ Données identiques, pas de changement visuel');
+            } else {
+                container.style.opacity = '0.5';
+                setTimeout(() => {
+                    container.innerHTML = html;
+                    container.style.opacity = '1';
+                    console.log('✅ Affichage mis à jour avec nouvelles données');
+                }, 100);
+            }
+        }
+        
+        function displayAlerts(alerts) {
+            const container = document.getElementById('alerts');
+            
+            if (!alerts || alerts.length === 0) {
+                container.innerHTML = '<p style="color: green;">✅ Aucune alerte</p>';
+                console.log('✅ Aucune alerte à afficher');
+                return;
+            }
+            
+            console.log(`🚨 Affichage de ${alerts.length} alerte(s)`);
+            
+            let html = '';
+            alerts.forEach((alert, index) => {
+                const severityClass = alert.severity === 'CRITIQUE' ? 'critical' : 'warning';
+                const timestamp = new Date(alert.timestamp).toLocaleString();
+                console.log(`  ${index + 1}. ${alert.sensor_id} - ${alert.parameter}: ${alert.message}`);
+                
+                html += `
+                    <div class="alert ${severityClass}">
+                        <strong>${alert.sensor_id}</strong> - ${alert.parameter.toUpperCase()}<br>
+                        <span>${alert.message}</span><br>
+                        <small>${timestamp}</small>
+                    </div>
+                `;
+            });
+            
+            // Forcer la mise à jour du DOM avec animation
+            if (container.innerHTML === html) {
+                console.log('⚠️ Alertes identiques, pas de changement visuel');
+            } else {
+                container.style.opacity = '0.5';
+                setTimeout(() => {
+                    container.innerHTML = html;
+                    container.style.opacity = '1';
+                    console.log('✅ Alertes mises à jour avec nouvelles données');
+                }, 100);
+            }
+        }
+        
+        function toggleAutoRefresh() {
+            const checkbox = document.getElementById('autoRefresh');
+            
+            if (checkbox.checked) {
+                if (autoRefreshInterval) {
+                    clearInterval(autoRefreshInterval);
+                }
+                console.log('✅ Actualisation automatique activée (5s)');
+                autoRefreshInterval = setInterval(() => {
+                    console.log('🔄 Actualisation automatique...');
+                    loadData();
+                }, 5000);
+            } else {
+                if (autoRefreshInterval) {
+                    clearInterval(autoRefreshInterval);
+                    autoRefreshInterval = null;
+                    console.log('⏸️ Actualisation automatique désactivée');
+                }
+            }
+        }
+        
+        // Initialiser la carte au chargement
+        window.addEventListener('DOMContentLoaded', () => {
+            initMap();
+            // Démarrer l'actualisation automatique
+            document.getElementById('autoRefresh').checked = true;
+            toggleAutoRefresh();
+            // Charger les données immédiatement
+            loadData();
+        });
+    </script>
+</body>
+</html>

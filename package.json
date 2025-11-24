@@ -1,0 +1,29 @@
+{
+  "name": "aquawatch-ms",
+  "version": "1.0.0",
+  "description": "Plateforme AquaWatch-MS pour la surveillance en temps réel de la qualité de l'eau",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd ingestion && npm install && cd ../alerts && npm install && cd ../api && npm install && cd ../scripts && npm install",
+    "start:ingestion": "cd ingestion && node server.js",
+    "start:alerts": "cd alerts && node service.js",
+    "start:api": "cd api && node server.js",
+    "start:simulator": "cd scripts && node simulator.js",
+    "start:all": "concurrently \"npm run start:ingestion\" \"npm run start:alerts\" \"npm run start:api\""
+  },
+  "keywords": [
+    "iot",
+    "water-quality",
+    "microservices",
+    "mqtt",
+    "timescaledb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.6"
+  }
+}

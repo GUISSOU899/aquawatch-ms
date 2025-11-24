@@ -1,0 +1,14 @@
+{
+  "name": "aquawatch-ingestion",
+  "version": "1.0.0",
+  "description": "Microservice d'ingestion des données capteurs via MQTT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "aedes": "^0.50.0",
+    "dotenv": "^16.3.1",
+    "sql.js": "^1.13.0"
+  }
+}
