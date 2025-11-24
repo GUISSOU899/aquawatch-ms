@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - mosquitto_data:/mosquitto/data
+    restart: unless-stopped
+
+  api:
+    build: ./api
+    depends_on:
+      - timescaledb
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  timescaledb:
+    image: timescale/timescaledb:latest-pg14
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=aqua
+    ports:
+      - "5432:5432"
+    volumes:
+      - timescale_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  sensor-gateway:
+    build: ./sensor-gateway
+    depends_on:
+      - timescaledb
+      - mosquitto
+    restart: unless-stopped
+
+volumes:
+  mosquitto_data:
+  timescale_data:

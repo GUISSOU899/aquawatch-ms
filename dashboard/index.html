@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaWatch Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; display: flex; height: 100vh; }
+    #map { width: 50%; height: 100%; }
+    #dashboard { width: 50%; padding: 20px; overflow-y: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
+    th { background-color: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="dashboard">
+    <h2>Sensor Readings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Sensor</th>
+          <th>pH</th>
+          <th>Turbidity</th>
+          <th>Temperature</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([33.97, -6.85], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const tableBody = document.getElementById('table-body');
+    const markers = {};
+
+    async function fetchData() {
+      try {
+        const res = await fetch('http://localhost:3000/api/readings');
+        const data = await res.json();
+
+        tableBody.innerHTML = '';
+
+        data.forEach(sensor => {
+          // Parse coordinates as numbers
+          const lat = parseFloat(sensor.latitude);
+          const lon = parseFloat(sensor.longitude);
+          if (isNaN(lat) || isNaN(lon)) return;
+
+          // Add table row
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${sensor.sensor_id}</td>
+            <td>${sensor.ph}</td>
+            <td>${sensor.turbidity}</td>
+            <td>${sensor.temperature}</td>
+            <td>${lat.toFixed(5)}</td>
+            <td>${lon.toFixed(5)}</td>
+          `;
+          tableBody.appendChild(row);
+
+          // Determine marker color
+          let color = 'green';
+          if (sensor.ph < 6.5) color = 'red';
+          else if (sensor.ph > 8.5) color = 'orange';
+
+          // Update or create marker
+          if (markers[sensor.sensor_id]) {
+            markers[sensor.sensor_id].setLatLng([lat, lon]);
+            markers[sensor.sensor_id].setStyle({ color });
+          } else {
+            const marker = L.circleMarker([lat, lon], {
+              radius: 8,
+              color: color,
+              fillColor: color,
+              fillOpacity: 0.8
+            }).addTo(map);
+            marker.bindPopup(`Sensor: ${sensor.sensor_id}<br>pH: ${sensor.ph}`);
+            markers[sensor.sensor_id] = marker;
+          }
+        });
+      } catch (err) {
+        console.error('Error fetching sensor data:', err);
+      }
+    }
+
+    fetchData();
+    setInterval(fetchData, 5000); // refresh every 5 seconds
+  </script>
+</body>
+</html>

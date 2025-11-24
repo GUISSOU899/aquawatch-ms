@@ -1,0 +1,10 @@
+{
+  "name": "sensor-gateway",
+  "version": "1.0.0",
+  "description": "MQTT to TimescaleDB gateway for AquaWatch-MS",
+  "main": "index.js",
+  "dependencies": {
+    "mqtt": "^4.3.7",
+    "pg": "^8.11.3"
+  }
+}
