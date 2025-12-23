@@ -1,0 +1,110 @@
+[
+  {
+    "sensor_id": "sensor-1",
+    "year": 2025,
+    "week": 48,
+    "ph": 7.201166347992335,
+    "turbidity": 2.5808731676226886,
+    "temperature": 15.022791586998087,
+    "conductivity": 843.1204270235824
+  },
+  {
+    "sensor_id": "sensor-2",
+    "year": 2025,
+    "week": 48,
+    "ph": 6.990152963671129,
+    "turbidity": 3.141077119184193,
+    "temperature": 18.05764818355639,
+    "conductivity": 1230.4791586998078
+  },
+  {
+    "sensor_id": "sensor-3",
+    "year": 2025,
+    "week": 48,
+    "ph": 7.491338432122373,
+    "turbidity": 1.938393881453154,
+    "temperature": 19.964340344168285,
+    "conductivity": 1530.8168005098798
+  },
+  {
+    "sensor_id": "sensor-1",
+    "year": 2025,
+    "week": 50,
+    "ph": 7.2034990560100685,
+    "turbidity": 2.634719949653868,
+    "temperature": 15.027564505978587,
+    "conductivity": 837.4273568281938
+  },
+  {
+    "sensor_id": "sensor-2",
+    "year": 2025,
+    "week": 50,
+    "ph": 6.994738829452474,
+    "turbidity": 3.1155443675267485,
+    "temperature": 17.899150409062234,
+    "conductivity": 1241.981969792321
+  },
+  {
+    "sensor_id": "sensor-3",
+    "year": 2025,
+    "week": 50,
+    "ph": 7.485852737570796,
+    "turbidity": 1.9242857142857168,
+    "temperature": 19.963555695405926,
+    "conductivity": 1528.4280302076759
+  },
+  {
+    "sensor_id": "sensor-1",
+    "year": 2025,
+    "week": 51,
+    "ph": 7.202712891282408,
+    "turbidity": 2.5961713227869456,
+    "temperature": 15.040772467182734,
+    "conductivity": 840.349596095593
+  },
+  {
+    "sensor_id": "sensor-2",
+    "year": 2025,
+    "week": 51,
+    "ph": 6.9982127229888835,
+    "turbidity": 3.1287781891618915,
+    "temperature": 17.996743520700097,
+    "conductivity": 1231.8516122517667
+  },
+  {
+    "sensor_id": "sensor-3",
+    "year": 2025,
+    "week": 51,
+    "ph": 7.493640188488751,
+    "turbidity": 1.9268596432177714,
+    "temperature": 19.925188488724366,
+    "conductivity": 1535.4974099629778
+  },
+  {
+    "sensor_id": "sensor-1",
+    "year": 2025,
+    "week": 52,
+    "ph": 7.185592920353976,
+    "turbidity": 2.6175132743362814,
+    "temperature": 15.07646902654868,
+    "conductivity": 852.8106017699115
+  },
+  {
+    "sensor_id": "sensor-2",
+    "year": 2025,
+    "week": 52,
+    "ph": 6.979070796460178,
+    "turbidity": 3.1127079646017712,
+    "temperature": 18.03355752212389,
+    "conductivity": 1234.1574955752224
+  },
+  {
+    "sensor_id": "sensor-3",
+    "year": 2025,
+    "week": 52,
+    "ph": 7.478469026548671,
+    "turbidity": 1.8947168141592898,
+    "temperature": 20.044327433628307,
+    "conductivity": 1541.1307876106184
+  }
+]

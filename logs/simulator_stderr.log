@@ -1,0 +1,2 @@
+❌ Erreur de connexion MQTT: read ECONNRESET
+💡 Assurez-vous que le serveur MQTT (microservice ingestion) est démarré

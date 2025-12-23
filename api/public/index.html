@@ -203,6 +203,7 @@
         
         <div class="auto-refresh">
             <button class="refresh-btn" id="refreshBtn" onclick="loadData()">🔄 Actualiser</button>
+            <button class="refresh-btn" id="logoutBtn" style="background:#e15656;">⎋ Déconnexion</button>
             <label>
                 <input type="checkbox" id="autoRefresh" checked onchange="toggleAutoRefresh()">
                 Actualisation automatique (5s)
@@ -249,27 +250,50 @@
             }).addTo(map);
         }
         
-        // Mettre à jour les marqueurs sur la carte
-        function updateMap(measurements) {
+        // Mettre à jour les marqueurs sur la carte (WQI-aware)
+        function updateMap(measurements, wqilist) {
             if (!map) return;
-            
+
             // Supprimer les anciens marqueurs
             Object.values(markers).forEach(marker => {
                 map.removeLayer(marker);
             });
             markers = {};
-            
+
             if (!measurements || measurements.length === 0) return;
-            
+
+            const wqimap = {};
+            if (wqilist && Array.isArray(wqilist)) wqilist.forEach(w => { wqimap[w.sensor_id] = w; });
+
             measurements.forEach(m => {
-                // Déterminer la couleur du marqueur selon l'état
-                let color = 'green';
-                if (m.ph < 6.5 || m.ph > 8.5 || m.turbidity > 5 || m.temperature < 0 || m.temperature > 30 || m.conductivity > 2500) {
-                    color = 'red';
-                } else if (m.ph < 6.8 || m.ph > 8.2 || m.turbidity > 3 || m.temperature < 5 || m.temperature > 25 || m.conductivity > 2000) {
-                    color = 'orange';
-                }
-                
+                    // Determine severity from raw measurements (prefer severity coloring)
+                    let color = 'green';
+                    const wqi = wqimap[m.sensor_id];
+
+                    // derive severity similar to measurements panel
+                    let severity = null; // 'WARNING' or 'CRITIQUE'
+                    if (m.ph < 6.5 || m.ph > 8.5 || m.turbidity > 5 || m.temperature < 0 || m.temperature > 30 || m.conductivity > 2500) {
+                        severity = 'CRITIQUE';
+                    } else if (m.ph < 6.8 || m.ph > 8.2 || m.turbidity > 3 || m.temperature < 5 || m.temperature > 25 || m.conductivity > 2000) {
+                        severity = 'WARNING';
+                    }
+
+                    if (severity === 'CRITIQUE') {
+                        color = 'red';
+                    } else if (severity === 'WARNING') {
+                        color = 'yellow';
+                    } else if (wqi && wqi.class) {
+                        // fallback to WQI class coloring when no severity
+                        switch ((wqi.class || '').toLowerCase()) {
+                            case 'excellent': color = 'green'; break;
+                            case 'good': color = 'blue'; break;
+                            case 'moderate': color = 'yellow'; break;
+                            case 'poor': color = 'orange'; break;
+                            case 'very poor': color = 'red'; break;
+                            default: color = 'gray';
+                        }
+                    }
+
                 // Créer le marqueur
                 const marker = L.marker([m.latitude, m.longitude], {
                     icon: L.divIcon({
@@ -279,8 +303,8 @@
                         iconAnchor: [10, 10]
                     })
                 }).addTo(map);
-                
-                // Ajouter un popup avec les informations du capteur
+
+                // Ajouter un popup avec les informations du capteur (incluant WQI)
                 const popupContent = `
                     <div style="min-width: 200px;">
                         <h3 style="margin: 0 0 10px 0; color: #667eea;">${m.sensor_id}</h3>
@@ -288,6 +312,7 @@
                             <tr><td><strong>pH:</strong></td><td>${m.ph.toFixed(2)}</td></tr>
                             <tr><td><strong>Température:</strong></td><td>${m.temperature.toFixed(2)}°C</td></tr>
                             <tr><td><strong>Turbidité:</strong></td><td>${m.turbidity.toFixed(2)} NTU</td></tr>
+                            <tr><td><strong>WQI:</strong></td><td>${wqi ? (wqi.wqi + ' (' + wqi.class + ')') : '—'}</td></tr>
                             <tr><td><strong>Conductivité:</strong></td><td>${m.conductivity.toFixed(2)} µS/cm</td></tr>
                             <tr><td><strong>Position:</strong></td><td>${m.latitude.toFixed(4)}, ${m.longitude.toFixed(4)}</td></tr>
                             <tr><td><strong>Dernière mise à jour:</strong></td><td>${new Date(m.timestamp).toLocaleString()}</td></tr>
@@ -295,10 +320,10 @@
                     </div>
                 `;
                 marker.bindPopup(popupContent);
-                
+
                 markers[m.sensor_id] = marker;
             });
-            
+
             // Ajuster la vue pour afficher tous les marqueurs
             if (measurements.length > 0) {
                 const bounds = measurements.map(m => [m.latitude, m.longitude]);
@@ -313,80 +338,79 @@
             const originalText = refreshBtn.textContent;
             const measurementsContainer = document.getElementById('measurements');
             const alertsContainer = document.getElementById('alerts');
-            
+
             refreshBtn.disabled = true;
             refreshBtn.textContent = '⏳ Chargement...';
             measurementsContainer.classList.add('updating');
             alertsContainer.classList.add('updating');
-            
+
             try {
                 // Ajouter un timestamp pour éviter le cache
                 const timestamp = new Date().getTime();
-                
-                // Charger les mesures
-                const measurementsRes = await fetch(`http://localhost:3000/latest-measurements?t=${timestamp}`, {
-                    cache: 'no-cache',
-                    headers: {
-                        'Cache-Control': 'no-cache',
-                        'Pragma': 'no-cache'
-                    }
-                });
-                if (!measurementsRes.ok) {
-                    throw new Error(`HTTP error! status: ${measurementsRes.status}`);
-                }
+
+                // Prepare headers (include JWT if present)
+                const headers = {
+                    'Cache-Control': 'no-cache',
+                    'Pragma': 'no-cache'
+                };
+                const token = localStorage.getItem('aw_token');
+                if (token) headers['Authorization'] = 'Bearer ' + token;
+
+                // Charger les mesures et alertes in parallel
+                const [measurementsRes, alertsRes] = await Promise.all([
+                    fetch(`http://localhost:3000/latest-measurements?t=${timestamp}`, { cache: 'no-cache', headers }),
+                    fetch(`http://localhost:3000/alerts?limit=10&t=${timestamp}`, { cache: 'no-cache', headers })
+                ]);
+
+                if (!measurementsRes.ok) throw new Error(`HTTP error! status: ${measurementsRes.status}`);
+                if (!alertsRes.ok) throw new Error(`HTTP error! status: ${alertsRes.status}`);
+
                 const measurementsData = await measurementsRes.json();
-                
-                // Charger les alertes
-                const alertsRes = await fetch(`http://localhost:3000/alerts?limit=10&t=${timestamp}`, {
-                    cache: 'no-cache',
-                    headers: {
-                        'Cache-Control': 'no-cache',
-                        'Pragma': 'no-cache'
-                    }
-                });
-                if (!alertsRes.ok) {
-                    throw new Error(`HTTP error! status: ${alertsRes.status}`);
-                }
                 const alertsData = await alertsRes.json();
-                
+
+                // Charger les WQI (requires JWT); tolerate failure
+                let wqiData = { data: [] };
+                try {
+                    const wqiRes = await fetch(`http://localhost:3000/wqi/latest?t=${timestamp}`, { cache: 'no-cache', headers });
+                    if (wqiRes.ok) wqiData = await wqiRes.json();
+                } catch (e) {
+                    console.warn('WQI fetch failed:', e.message);
+                }
+
                 // Créer un hash des données pour détecter les changements
                 const currentHash = JSON.stringify(measurementsData.data);
                 const hasChanged = currentHash !== lastMeasurementsHash;
-                
+
                 if (hasChanged) {
                     console.log('🔄 CHANGEMENT DÉTECTÉ dans les données !');
                     lastMeasurementsHash = currentHash;
                 } else {
                     console.log('⏸️ Aucun changement dans les données');
                 }
-                
-                console.log('✅ Données reçues:', { 
-                    measurements: measurementsData.data?.length || 0, 
+
+                console.log('✅ Données reçues:', {
+                    measurements: measurementsData.data?.length || 0,
                     alerts: alertsData.data?.length || 0,
+                    wqi: wqiData.data?.length || 0,
                     timestamp: new Date().toLocaleTimeString(),
                     changed: hasChanged
                 });
-                
-                if (measurementsData.data && measurementsData.data.length > 0) {
-                    console.log('📊 Première mesure:', measurementsData.data[0]);
-                    console.log('📊 Dernière mesure:', measurementsData.data[measurementsData.data.length - 1]);
-                }
-                
-                // Mettre à jour l'affichage
+
+                // Mettre à jour l'affichage (inclut WQI)
                 console.log('🔄 Mise à jour de l\'affichage...');
-                displayMeasurements(measurementsData.data || []);
+                displayMeasurements(measurementsData.data || [], wqiData.data || []);
                 displayAlerts(alertsData.data || []);
-                updateMap(measurementsData.data || []);
-                
+                updateMap(measurementsData.data || [], wqiData.data || []);
+
                 const updateTime = new Date().toLocaleString();
-                document.getElementById('lastUpdate').textContent = 
+                document.getElementById('lastUpdate').textContent =
                     `Dernière mise à jour: ${updateTime}`;
                 console.log('✅ Affichage mis à jour à', updateTime);
             } catch (error) {
                 console.error('Erreur:', error);
-                document.getElementById('measurements').innerHTML = 
+                document.getElementById('measurements').innerHTML =
                     '<p class="error">❌ Erreur de connexion à l\'API: ' + error.message + '</p>';
-                document.getElementById('alerts').innerHTML = 
+                document.getElementById('alerts').innerHTML =
                     '<p class="error">❌ Erreur de connexion à l\'API</p>';
             } finally {
                 refreshBtn.disabled = false;
@@ -396,17 +420,21 @@
             }
         }
         
-        function displayMeasurements(measurements) {
+        function displayMeasurements(measurements, wqilist) {
             const container = document.getElementById('measurements');
-            
+
             if (!measurements || measurements.length === 0) {
                 container.innerHTML = '<p>Aucune mesure disponible</p>';
                 console.log('⚠️ Aucune mesure à afficher');
                 return;
             }
-            
+
             console.log(`📊 Affichage de ${measurements.length} mesure(s)`);
-            
+
+            // map WQI by sensor_id for quick lookup
+            const wqimap = {};
+            if (wqilist && Array.isArray(wqilist)) wqilist.forEach(w => { wqimap[w.sensor_id] = w; });
+
             let html = '';
             measurements.forEach((m, index) => {
                 // Déterminer le statut
@@ -419,10 +447,13 @@
                     status = '⚠️ Attention';
                     statusColor = 'orange';
                 }
-                
+
                 const timestamp = new Date(m.timestamp).toLocaleString();
                 console.log(`  ${index + 1}. ${m.sensor_id}: pH=${m.ph.toFixed(2)}, Temp=${m.temperature.toFixed(2)}°C, Timestamp=${timestamp}`);
-                
+
+                const wqi = wqimap[m.sensor_id];
+                const wqiDisplay = wqi ? `${wqi.wqi} (${wqi.class})` : '—';
+
                 html += `
                     <div class="sensor-data">
                         <h3>📍 ${m.sensor_id} <span style="color: ${statusColor}; font-size: 0.8em;">${status}</span></h3>
@@ -443,6 +474,14 @@
                             <span>${m.conductivity.toFixed(2)} µS/cm</span>
                         </div>
                         <div class="sensor-data">
+                            <label>WQI:</label>
+                            <span id="wqi-${m.sensor_id}">${wqiDisplay}</span>
+                        </div>
+                        <div class="sensor-data">
+                            <label>WQI (24h):</label>
+                            <canvas id="wqi-trend-${m.sensor_id}" width="240" height="50" style="border:1px solid #f1f1f1; display:block;"></canvas>
+                        </div>
+                        <div class="sensor-data">
                             <label>Position:</label>
                             <span>${m.latitude.toFixed(4)}, ${m.longitude.toFixed(4)}</span>
                         </div>
@@ -454,7 +493,7 @@
                     <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
                 `;
             });
-            
+
             // Forcer la mise à jour du DOM avec animation
             if (container.innerHTML === html) {
                 console.log('⚠️ Données identiques, pas de changement visuel');
@@ -464,7 +503,45 @@
                     container.innerHTML = html;
                     container.style.opacity = '1';
                     console.log('✅ Affichage mis à jour avec nouvelles données');
+                    // draw small trend charts for each sensor (non-blocking)
+                    setTimeout(() => {
+                        measurements.forEach(m => drawSmallTrend(m.sensor_id));
+                    }, 50);
                 }, 100);
+            }
+        }
+
+        // Draw small inline WQI trend for a sensor using /wqi/forecast
+        async function drawSmallTrend(sensorId) {
+            const canvas = document.getElementById(`wqi-trend-${sensorId}`);
+            if (!canvas) return;
+            const token = localStorage.getItem('aw_token');
+            const headers = {};
+            if (token) headers['Authorization'] = 'Bearer ' + token;
+            try {
+                const res = await fetch(`http://localhost:3000/wqi/forecast?sensor_id=${encodeURIComponent(sensorId)}`, { headers });
+                if (!res.ok) return;
+                const j = await res.json();
+                if (!j || !Array.isArray(j.data) || j.data.length === 0) return;
+                const points = j.data.slice(-24).map(p => isFinite(Number(p.wqi)) ? Number(p.wqi) : null);
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                const vals = points.filter(v=>v!==null);
+                if (vals.length === 0) return;
+                const min = Math.min(...vals);
+                const max = Math.max(...vals);
+                const pad = 6;
+                const w = canvas.width - pad*2;
+                const h = canvas.height - pad*2;
+                ctx.beginPath();
+                points.forEach((v,i)=>{
+                    const x = pad + (i/(points.length-1||1)) * w;
+                    const y = pad + h - ((v===null?min:v) - min) / ((max - min) || 1) * h;
+                    if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+                });
+                ctx.strokeStyle = '#2b7'; ctx.lineWidth = 1.5; ctx.stroke();
+            } catch (e) {
+                // silent
             }
         }
         
@@ -528,8 +605,27 @@
             }
         }
         
+        // Auth: require JWT to view dashboard (redirect to /login.html)
+        function isTokenValid() {
+            const t = localStorage.getItem('aw_token');
+            return !!t;
+        }
+
+        function logout() {
+            localStorage.removeItem('aw_token');
+            location.href = '/login.html';
+        }
+
         // Initialiser la carte au chargement
         window.addEventListener('DOMContentLoaded', () => {
+            // Redirect to login if no token
+            if (!isTokenValid()) {
+                location.href = '/login.html';
+                return;
+            }
+
+            document.getElementById('logoutBtn').addEventListener('click', logout);
+
             initMap();
             // Démarrer l'actualisation automatique
             document.getElementById('autoRefresh').checked = true;

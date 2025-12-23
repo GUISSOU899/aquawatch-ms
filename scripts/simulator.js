@@ -63,6 +63,12 @@ function randomValue(base, variation, min = null, max = null) {
 function generateMeasurement(sensor) {
   const base = BASE_VALUES[sensor.id];
   const timestamp = new Date().toISOString();
+
+  // Add a random jitter to coordinates to simulate movement
+  // Increase to ~0.02 degrees (~2km) so movement is clearly visible on the map
+  const jitter = (max = 0.02) => (Math.random() * 2 - 1) * max;
+  const latitude = parseFloat((sensor.latitude + jitter()).toFixed(6));
+  const longitude = parseFloat((sensor.longitude + jitter()).toFixed(6));
   
   // 5% de chance de générer une valeur anormale pour tester les alertes
   const isAnomaly = Math.random() < 0.05;
@@ -110,8 +116,8 @@ function generateMeasurement(sensor) {
   return {
     sensor_id: sensor.id,
     timestamp: timestamp,
-    latitude: sensor.latitude,
-    longitude: sensor.longitude,
+    latitude: latitude,
+    longitude: longitude,
     ph: ph,
     turbidity: turbidity,
     temperature: temperature,
@@ -194,4 +200,5 @@ main().catch((error) => {
   console.error('❌ Erreur fatale:', error);
   process.exit(1);
 });
+
 

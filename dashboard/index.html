@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaWatch Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; display: flex; height: 100vh; }
+    #map { width: 50%; height: 100%; }
+    #dashboard { width: 50%; padding: 20px; overflow-y: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
+    th { background-color: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="dashboard">
+    <h2>Sensor Readings</h2>
+    <div id="login-area">
+      <h3>Login</h3>
+      <input id="username" placeholder="username" />
+      <input id="password" type="password" placeholder="password" />
+      <button id="btn-login">Login</button>
+      <div id="login-msg" style="color: red; margin-top: 6px;"></div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Sensor</th>
+          <th>pH</th>
+          <th>Turbidity</th>
+          <th>Temperature</th>
+          <th>WQI</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <div id="info-panel" style="margin-top:16px; border-top:1px solid #ddd; padding-top:12px; display:none;">
+      <h3 id="info-title">Sensor details</h3>
+      <div id="info-content">
+        <div id="info-main"></div>
+        <canvas id="wqi-trend" width="480" height="120" style="border:1px solid #eee; margin-top:8px;"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([33.97, -6.85], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const tableBody = document.getElementById('table-body');
+    const markers = {};
+    const ANIMATION_DURATION = 4500; // ms — should be slightly less than fetch interval
+    const infoPanel = document.getElementById('info-panel');
+    const infoTitle = document.getElementById('info-title');
+    const infoMain = document.getElementById('info-main');
+    const wqiCanvas = document.getElementById('wqi-trend');
+
+    // Animation loop for smooth marker movement
+    function animateMarkers() {
+      const now = Date.now();
+      Object.values(markers).forEach(obj => {
+        const { marker, anim } = obj;
+        if (!anim) return;
+        const elapsed = now - anim.startTime;
+        const t = Math.min(1, elapsed / ANIMATION_DURATION);
+        const lat = anim.startLat + (anim.endLat - anim.startLat) * t;
+        const lon = anim.startLng + (anim.endLng - anim.startLng) * t;
+        marker.setLatLng([lat, lon]);
+        if (t >= 1) obj.anim = null;
+      });
+      requestAnimationFrame(animateMarkers);
+    }
+    requestAnimationFrame(animateMarkers);
+
+    function wqiColorClassLabel(cls) {
+      // Map WQI class to color
+      switch ((cls || '').toLowerCase()) {
+        case 'excellent': return 'green';
+        case 'good': return 'blue';
+        case 'moderate': return 'yellow';
+        case 'poor': return 'orange';
+        case 'very poor': return 'red';
+        default: return 'gray';
+      }
+    }
+
+    async function fetchData() {
+      try {
+        const headers = {};
+        const token = localStorage.getItem('aw_token');
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+
+        // Fetch latest measurements and latest WQI in parallel
+        const [mRes, wRes] = await Promise.all([
+          fetch('http://localhost:3000/latest-measurements', { headers }),
+          fetch('http://localhost:3000/wqi/latest', { headers })
+        ]);
+        const measurements = await mRes.json();
+        const wqij = await wRes.json();
+        const wqimap = {};
+        if (wqij && Array.isArray(wqij.data)) {
+          wqij.data.forEach(x => { wqimap[x.sensor_id] = x; });
+        }
+
+        tableBody.innerHTML = '';
+
+        measurements.forEach(sensor => {
+          // Parse coordinates as numbers
+          const lat = parseFloat(sensor.latitude);
+          const lon = parseFloat(sensor.longitude);
+          if (isNaN(lat) || isNaN(lon)) return;
+          // attach WQI if available
+          const wqi = wqimap[sensor.sensor_id];
+
+          // Add table row, make clickable to show details
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td class="sensor-id">${sensor.sensor_id}</td>
+            <td>${sensor.ph}</td>
+            <td>${sensor.turbidity}</td>
+            <td>${sensor.temperature}</td>
+            <td class="wqi-cell">${wqi ? `${wqi.wqi} (${wqi.class})` : '—'}</td>
+            <td>${lat.toFixed(5)}</td>
+            <td>${lon.toFixed(5)}</td>
+          `;
+          row.style.cursor = 'pointer';
+          row.addEventListener('click', () => showSensorDetails(sensor.sensor_id, wqi));
+          tableBody.appendChild(row);
+
+          // Determine marker color based on WQI class if present, otherwise gray
+          let color = 'gray';
+          if (wqi && wqi.class) color = wqiColorClassLabel(wqi.class);
+
+          // Update or create marker with smooth animation and click handler
+          if (markers[sensor.sensor_id]) {
+            const obj = markers[sensor.sensor_id];
+            const currentLatLng = obj.marker.getLatLng();
+            obj.anim = {
+              startLat: currentLatLng.lat,
+              startLng: currentLatLng.lng,
+              endLat: lat,
+              endLng: lon,
+              startTime: Date.now()
+            };
+            obj.marker.setStyle({ color, fillColor: color });
+            obj.marker.bindPopup(`Sensor: ${sensor.sensor_id}<br>pH: ${sensor.ph}<br>WQI: ${wqi ? wqi.wqi : '—'}`);
+            obj.marker.off('click');
+            obj.marker.on('click', () => showSensorDetails(sensor.sensor_id, wqi));
+          } else {
+            const marker = L.circleMarker([lat, lon], {
+              radius: 8,
+              color: color,
+              fillColor: color,
+              fillOpacity: 0.9
+            }).addTo(map);
+            marker.bindPopup(`Sensor: ${sensor.sensor_id}<br>pH: ${sensor.ph}<br>WQI: ${wqi ? wqi.wqi : '—'}`);
+            marker.on('click', () => showSensorDetails(sensor.sensor_id, wqi));
+            markers[sensor.sensor_id] = { marker, anim: null };
+          }
+        });
+      } catch (err) {
+        console.error('Error fetching sensor data:', err);
+      }
+    }
+
+    fetchData();
+    setInterval(fetchData, 5000); // refresh every 5 seconds
+
+    // Show sensor details and draw trend chart
+    async function showSensorDetails(sensorId, wqi) {
+      infoPanel.style.display = 'block';
+      infoTitle.innerText = `Sensor ${sensorId}`;
+      infoMain.innerHTML = `<strong>WQI:</strong> ${wqi ? wqi.wqi + ' (' + wqi.class + ')' : '—'}<br>` +
+        `<strong>Timestamp:</strong> ${wqi ? wqi.timestamp : '—'}`;
+
+      // Fetch forecast WQI series for this sensor (last 24 points)
+      try {
+        const headers = {};
+        const token = localStorage.getItem('aw_token');
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+        const url = `http://localhost:3000/wqi/forecast?sensor_id=${encodeURIComponent(sensorId)}`;
+        const res = await fetch(url, { headers });
+        const j = await res.json();
+        let series = [];
+        if (j && Array.isArray(j.data)) {
+          series = j.data.map(it => ({ t: it.timestamp, v: Number(it.wqi) }));
+        }
+        // If no forecast series, fall back to single point
+        if (series.length === 0 && wqi) series = [{ t: wqi.timestamp, v: Number(wqi.wqi) }];
+        // keep last 24 points
+        series = series.slice(-24);
+        drawTrend(series);
+      } catch (e) {
+        console.error('Error fetching forecast for trend:', e);
+      }
+    }
+
+    function drawTrend(points) {
+      const c = wqiCanvas;
+      const ctx = c.getContext('2d');
+      ctx.clearRect(0,0,c.width,c.height);
+      if (!points || points.length === 0) {
+        ctx.fillStyle = '#666'; ctx.fillText('No trend data', 10, 20); return;
+      }
+      // compute min/max
+      const vals = points.map(p=>isFinite(p.v)?p.v:0);
+      const min = Math.min(...vals);
+      const max = Math.max(...vals);
+      const pad = 8;
+      const w = c.width - pad*2;
+      const h = c.height - pad*2;
+      // draw axes
+      ctx.strokeStyle = '#ddd'; ctx.beginPath(); ctx.rect(pad,pad,w,h); ctx.stroke();
+      // draw line
+      ctx.beginPath();
+      points.forEach((p,i)=>{
+        const x = pad + (i/(points.length-1||1)) * w;
+        const y = pad + h - ((p.v - min) / ((max - min) || 1)) * h;
+        if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      });
+      ctx.strokeStyle = '#2b7'; ctx.lineWidth = 2; ctx.stroke();
+      // draw points colored by class
+      points.forEach((p,i)=>{
+        const x = pad + (i/(points.length-1||1)) * w;
+        const y = pad + h - ((p.v - min) / ((max - min) || 1)) * h;
+        const cls = classifyWQI(p.v);
+        ctx.fillStyle = wqiColorClassLabel(cls);
+        ctx.beginPath(); ctx.arc(x,y,3,0,Math.PI*2); ctx.fill();
+      });
+    }
+
+    function classifyWQI(v) {
+      if (!isFinite(v)) return null;
+      if (v >= 90) return 'Excellent';
+      if (v >= 70) return 'Good';
+      if (v >= 50) return 'Moderate';
+      if (v >= 25) return 'Poor';
+      return 'Very Poor';
+    }
+  
+    // Authentication UI
+    const btn = document.getElementById('btn-login');
+    btn.addEventListener('click', async () => {
+      const u = document.getElementById('username').value;
+      const p = document.getElementById('password').value;
+      try {
+        const r = await fetch('http://localhost:3000/auth/login', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: u, password: p })
+        });
+        const j = await r.json();
+        if (!j.success) { document.getElementById('login-msg').innerText = j.error || 'login failed'; return; }
+        localStorage.setItem('aw_token', j.token);
+        document.getElementById('login-area').style.display = 'none';
+        document.getElementById('login-msg').innerText = '';
+      } catch (e) { document.getElementById('login-msg').innerText = e.message; }
+    });
+  </script>
+</body>
+</html>

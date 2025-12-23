@@ -1,0 +1,1946 @@
+[
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-14T22:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0.30990041212036257,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 58.99,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 99.97,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-14T23:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 15.938711817687459,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 58.44,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 98.41,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T00:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T01:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T02:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 1728.3117976617498,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T03:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T04:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T05:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T06:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T07:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T08:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T09:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T10:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T11:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T12:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T13:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T14:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T15:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T16:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T17:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T18:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T19:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T20:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-1",
+    "timestamp": "2025-12-15T21:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-14T22:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 4.112442644930127,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 58.86,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 99.59,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-14T23:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T00:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T01:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 90.33587702975501,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 55.84,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 90.97,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T02:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T03:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T04:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 7677.576962066815,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T05:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T06:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T07:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T08:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T09:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T10:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T11:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T12:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T13:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T14:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T15:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T16:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T17:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T18:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T19:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T20:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-2",
+    "timestamp": "2025-12-15T21:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-14T22:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-14T23:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 7.582132269345113,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 58.73,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 99.24,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T00:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 11.974086522051394,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 58.58,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 98.8,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T01:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T02:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 320.44040384797063,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 47.79,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 67.96,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T03:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 987.5810874265458,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24.43,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 1.24,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T04:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T05:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T06:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T07:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T08:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T09:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T10:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T11:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T12:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T13:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T14:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T15:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T16:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T17:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T18:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T19:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T20:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 0,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": false,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 59,
+      "class": "Moderate",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 100,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  },
+  {
+    "sensor_id": "sensor-3",
+    "timestamp": "2025-12-15T21:00:00+00:00",
+    "parameter": "turbidity",
+    "prediction": 10000,
+    "risk": {
+      "parameter": "turbidity",
+      "exceeds_who": true,
+      "who_threshold": 5
+    },
+    "wqi": {
+      "wqi": 24,
+      "class": "Poor",
+      "subindices": {
+        "ph": 0,
+        "turbidity": 0,
+        "temperature": 20,
+        "conductivity": 100
+      },
+      "weights": {
+        "ph": 0.25,
+        "turbidity": 0.35,
+        "temperature": 0.2,
+        "conductivity": 0.2
+      }
+    }
+  }
+]

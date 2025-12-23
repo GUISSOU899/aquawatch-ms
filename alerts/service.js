@@ -1,4 +1,5 @@
 const { initDatabase, getRecentMeasurements, insertAlert, checkRecentAlert } = require('./db');
+const { sendAlertEmail } = require('./email');
 
 // Seuils OMS (Organisation Mondiale de la Santé) pour la qualité de l'eau
 const THRESHOLDS = {
@@ -137,6 +138,16 @@ async function processAlerts() {
         console.log(`💬 Message: ${alert.message}`);
         console.log(`🕐 Timestamp: ${new Date(alert.timestamp).toLocaleString()}`);
         console.log('================================\n');
+        // Send email asynchronously (fire-and-forget but log errors)
+        try {
+          // schedule non-blocking send
+          setImmediate(() => {
+            sendAlertEmail(alert.sensor_id, alert.parameter, alert.value, alert.threshold)
+              .catch(err => console.error('❌ Email send error:', err && err.message ? err.message : err));
+          });
+        } catch (e) {
+          console.error('❌ Failed to schedule email send:', e && e.message ? e.message : e);
+        }
       }
     }
 

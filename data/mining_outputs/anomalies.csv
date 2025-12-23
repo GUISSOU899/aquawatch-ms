@@ -1,0 +1,4 @@
+sensor_id,total,ph,turbidity,temperature,conductivity
+"sensor-1",10230,{"count":128,"frequency":0.012512218963831867,"recurrent":false},{"count":115,"frequency":0.011241446725317693,"recurrent":false},{"count":111,"frequency":0.010850439882697948,"recurrent":false},{"count":136,"frequency":0.013294232649071359,"recurrent":false}
+"sensor-2",10230,{"count":135,"frequency":0.013196480938416423,"recurrent":false},{"count":147,"frequency":0.01436950146627566,"recurrent":false},{"count":126,"frequency":0.012316715542521995,"recurrent":false},{"count":123,"frequency":0.012023460410557185,"recurrent":false}
+"sensor-3",10230,{"count":126,"frequency":0.012316715542521995,"recurrent":false},{"count":122,"frequency":0.01192570869990225,"recurrent":false},{"count":125,"frequency":0.012218963831867057,"recurrent":false},{"count":135,"frequency":0.013196480938416423,"recurrent":false}

@@ -1,0 +1,6 @@
+🚀 API REST démarrée sur le port 3000
+📡 Endpoints disponibles:
+   - GET http://localhost:3000/health
+   - GET http://localhost:3000/latest-measurements
+   - GET http://localhost:3000/alerts
+   - 🌐 Dashboard: http://localhost:3000/

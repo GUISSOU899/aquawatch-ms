@@ -7,7 +7,8 @@
     "start": "node service.js"
   },
   "dependencies": {
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.6.1",
+    "nodemailer": "^7.0.12",
     "sql.js": "^1.13.0"
   }
 }

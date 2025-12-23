@@ -1,0 +1,1968 @@
+🚀 Démarrage du microservice Alertes...
+✅ Table des alertes initialisée avec succès
+⏰ Vérification des alertes toutes les 60 secondes...
+⏳ Aucune mesure récente à vérifier
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 10.19 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 10.19 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 15/12/2025 23:06:30
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.56 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.56 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 15/12/2025 23:10:30
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 4.31 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 4.31 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 15/12/2025 23:32:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 9.59 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.59 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 15/12/2025 23:37:33
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -1.61 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -1.61 °C (seuil: 0-30 °C)
+🕐 Timestamp: 15/12/2025 23:45:28
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 14.38 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 14.38 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 15/12/2025 23:52:29
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 9.36 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.36 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 00:03:30
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 35.18 (Seuil: 30)
+🔴 Sévérité: CRITIQUE
+💬 Message: Température hors norme: 35.18 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 00:14:31
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 13.36 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 13.36 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 00:25:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3772.48 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3772.48 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 00:46:29
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 37.57 (Seuil: 30)
+🔴 Sévérité: CRITIQUE
+💬 Message: Température hors norme: 37.57 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 00:47:29
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -0.78 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -0.78 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 01:01:30
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 9.28 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.28 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 01:04:31
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 31.74 (Seuil: 30)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: 31.74 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 01:12:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3215.65 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3215.65 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 01:22:32
+================================
+
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 9.9 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.90 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 01:22:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -0.33 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -0.33 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 01:38:34
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 9.78 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.78 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 01:41:34
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 9.03 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.03 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 01:46:30
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 36.75 (Seuil: 30)
+🔴 Sévérité: CRITIQUE
+💬 Message: Température hors norme: 36.75 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 02:02:31
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 9.63 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.63 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 02:04:31
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 11.47 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 11.47 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 02:07:31
+================================
+
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 13.38 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 13.38 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 02:07:31
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 4.47 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 4.47 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 02:13:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 32.33 (Seuil: 30)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: 32.33 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 02:19:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -3.11 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -3.11 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 02:20:32
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.96 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.96 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 06:42:00
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3402.71 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3402.71 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 06:49:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 9.32 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.32 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 06:52:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 12.29 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 12.29 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 06:54:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 14.48 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 14.48 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 06:55:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 9.52 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.52 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 06:57:01
+================================
+
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -1.06 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -1.06 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 06:57:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 4968.79 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 4968.79 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 07:29:04
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 9.63 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.63 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 07:30:04
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.62 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.62 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 07:41:00
+================================
+
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 3.61 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 3.61 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 07:41:00
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 9.63 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.63 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 07:43:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3951.34 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3951.34 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 07:44:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3754.25 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3754.25 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 07:54:02
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 30.3 (Seuil: 30)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: 30.30 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 08:05:03
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3410.45 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3410.45 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 08:06:03
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 3.93 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 3.93 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 08:08:03
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.79 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.79 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 08:14:03
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -0.42 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -0.42 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 08:20:04
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 9.76 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.76 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 08:32:00
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 4421.45 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 4421.45 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 08:35:00
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: 39.92 (Seuil: 30)
+🔴 Sévérité: CRITIQUE
+💬 Message: Température hors norme: 39.92 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 08:43:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 4.45 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 4.45 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 08:45:01
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: PH
+📊 Valeur: 9.78 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.78 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 09:00:02
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3892.7 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3892.70 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 09:03:03
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -0.95 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -0.95 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 09:06:03
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 14.03 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 14.03 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 09:18:04
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 11.18 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 11.18 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 09:21:04
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 4.12 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 4.12 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 09:22:05
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 10.87 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 10.87 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 09:25:05
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3411.45 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3411.45 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 09:31:05
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.87 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.87 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 21:24:38
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 12.91 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 12.91 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 21:33:34
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: PH
+📊 Valeur: 3.64 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 3.64 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 21:37:35
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 4998.03 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 4998.03 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 21:39:35
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TEMPERATURE
+📊 Valeur: -0.17 (Seuil: 0)
+🔴 Sévérité: WARNING
+💬 Message: Température hors norme: -0.17 °C (seuil: 0-30 °C)
+🕐 Timestamp: 16/12/2025 21:45:35
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 9.06 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.06 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 21:56:36
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3753.3 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3753.30 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 22:00:37
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-1
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 12.31 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 12.31 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 22:01:37
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.61 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.61 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 22:02:37
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 3.57 (Seuil: 6.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 3.57 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 22:03:37
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 3572.22 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 3572.22 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 22:09:38
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 10.85 (Seuil: 5)
+🔴 Sévérité: CRITIQUE
+💬 Message: Turbidité élevée: 10.85 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 22:34:35
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 4723.98 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 4723.98 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 22:40:36
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: PH
+📊 Valeur: 9.66 (Seuil: 8.5)
+🔴 Sévérité: CRITIQUE
+💬 Message: pH hors norme: 9.66 pH (seuil: 6.5-8.5 pH)
+🕐 Timestamp: 16/12/2025 22:50:36
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-3
+⚠️  Paramètre: TURBIDITY
+📊 Valeur: 9.85 (Seuil: 5)
+🔴 Sévérité: WARNING
+💬 Message: Turbidité élevée: 9.85 NTU (seuil max: 5 NTU)
+🕐 Timestamp: 16/12/2025 22:56:37
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+
+🚨 ===== ALERTE DÉTECTÉE =====
+📧 EMAIL envoyé à: admin@aquawatch.local
+📱 SMS envoyé à: +33 6 12 34 56 78
+📍 Capteur: sensor-2
+⚠️  Paramètre: CONDUCTIVITY
+📊 Valeur: 4876.95 (Seuil: 2500)
+🔴 Sévérité: WARNING
+💬 Message: Conductivité élevée: 4876.95 µS/cm (seuil max: 2500 µS/cm)
+🕐 Timestamp: 16/12/2025 23:00:37
+================================
+
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+🔍 Vérification de 3 mesure(s) récente(s)...
+✅ Toutes les mesures sont dans les normes
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier
+⏳ Aucune mesure récente à vérifier

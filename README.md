@@ -171,6 +171,22 @@ npm run start:simulator
 cd scripts && npm start
 ```
 
+## 📈 Analytics & Machine Learning (local)
+
+Le projet inclut désormais des outils simples d'analyse historique et de ML.
+
+- Data mining (Node.js) :
+  - `node data-mining/index.js` -> écrit `data/mining_outputs/*` (stats, daily, weekly, anomalies, measurements.csv)
+
+- ML baseline (Python) :
+  - Installer : `pip install -r ml/requirements.txt`
+  - Entraîner : `python ml/train.py` -> écrit `data/ml_outputs/predictions.csv` et `ml/models/`
+
+Endpoints API exposés :
+- `GET /stats` — retourne `data/mining_outputs/stats.json`
+- `GET /predictions` — retourne `data/ml_outputs/predictions.csv` (JSON)
+
+
 ## 🧪 Test du Pipeline Complet
 
 1. **Vérifier que TimescaleDB est démarré** :
@@ -372,4 +388,5 @@ MIT
 ---
 
 **AquaWatch-MS** - Surveillance de la qualité de l'eau en temps réel 🌊
+
 

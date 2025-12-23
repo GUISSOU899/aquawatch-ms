@@ -9,7 +9,10 @@
     "start:alerts": "cd alerts && node service.js",
     "start:api": "cd api && node server.js",
     "start:simulator": "cd scripts && node simulator.js",
-    "start:all": "concurrently \"npm run start:ingestion\" \"npm run start:alerts\" \"npm run start:api\""
+    "start:all": "concurrently \"npm run start:ingestion\" \"npm run start:alerts\" \"npm run start:api\"",
+    "data-mining": "node data-mining/index.js",
+    "ml-train": "python ml/train.py",
+    "ml-predict": "python ml/predict.py"
   },
   "keywords": [
     "iot",
@@ -24,6 +27,9 @@
     "concurrently": "^8.2.2"
   },
   "dependencies": {
-    "better-sqlite3": "^12.4.6"
+    "better-sqlite3": "^12.4.6",
+    "pg": "^8.11.0",
+    "sql.js": "^1.9.0"
   }
 }
+
