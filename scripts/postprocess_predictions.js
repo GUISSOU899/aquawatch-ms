@@ -2,7 +2,22 @@ const fs = require('fs');
 const path = require('path');
 const { computeWQI } = require('../lib/wqi');
 
-const IN = path.join(__dirname, '..', 'data', 'ml_outputs', 'predictions.csv');
+// Prefer latest predictions from `ai/predictions.csv` (produced by the model).
+// Fall back to data/ml_outputs/predictions.csv for backwards compatibility.
+const AI_IN = path.join(__dirname, '..', 'ai', 'predictions.csv');
+const LEGACY_IN = path.join(__dirname, '..', 'data', 'ml_outputs', 'predictions.csv');
+const IN = fs.existsSync(AI_IN) ? AI_IN : LEGACY_IN;
+
+// If a legacy predictions CSV exists but we're using ai/predictions.csv, archive the old file
+try {
+  if (fs.existsSync(LEGACY_IN) && IN !== LEGACY_IN) {
+    const bak = LEGACY_IN + '.bak.' + Date.now();
+    fs.renameSync(LEGACY_IN, bak);
+    console.log('Archived legacy predictions file to', bak);
+  }
+} catch (e) {
+  console.warn('Could not archive legacy predictions file:', e.message);
+}
 const OUT = path.join(__dirname, '..', 'data', 'ml_outputs', 'predictions.json');
 
 const WHO = {
@@ -24,29 +39,44 @@ const rows = lines.slice(1).map(l => {
   return obj;
 });
 
-// Postprocess: clip predictions to a reasonable numeric range and add risk flag
+// Postprocess: validate and clamp predictions per-parameter and add risk flag
+const CLAMPS = {
+  ph: { min: 0, max: 14 },
+  turbidity: { min: 0, max: 1000 },
+  temperature: { min: -50, max: 60 },
+  conductivity: { min: 0, max: 10000 },
+  wqi: { min: 0, max: 100 }
+};
+
+function clampParam(param, value) {
+  const p = (param || '').toString().toLowerCase();
+  const c = CLAMPS[p];
+  if (!Number.isFinite(value)) return null;
+  if (!c) return value; // no clamp defined
+  if (value < c.min) return c.min;
+  if (value > c.max) return c.max;
+  return value;
+}
+
 const processed = rows.map(r => {
-  const p = Number(r.prediction);
-  // clip NaN
-  let pred = Number.isFinite(p) ? p : 0;
-  // clamp to [0, 10000]
-  if (pred < 0) pred = 0;
-  if (pred > 10000) pred = 10000;
+  const raw = Number(r.prediction);
+  const param = (r.parameter || '').toString().toLowerCase();
+  let pred = Number.isFinite(raw) ? raw : null;
+  pred = pred === null ? null : clampParam(param, pred);
+
   const risk = {};
-  if (r.parameter === 'turbidity') {
+  if (param === 'turbidity') {
     risk.parameter = 'turbidity';
-    risk.exceeds_who = pred > WHO.turbidity.max;
+    risk.exceeds_who = pred !== null && pred > WHO.turbidity.max;
     risk.who_threshold = WHO.turbidity.max;
   }
 
   // compute WQI combining available fields (ph, turbidity, temperature, conductivity)
-  // Note: predictions.csv may only contain a single parameter per row; we compute WQI
-  // using the available predicted value for that parameter and leaving others null.
   const wqi = computeWQI({
-    ph: r.parameter === 'pH' ? pred : (r.ph !== undefined ? Number(r.ph) : null),
-    turbidity: r.parameter === 'turbidity' ? pred : (r.turbidity !== undefined ? Number(r.turbidity) : null),
-    temperature: r.temperature !== undefined ? Number(r.temperature) : null,
-    conductivity: r.conductivity !== undefined ? Number(r.conductivity) : null
+    ph: param === 'ph' ? pred : (r.ph !== undefined ? clampParam('ph', Number(r.ph)) : null),
+    turbidity: param === 'turbidity' ? pred : (r.turbidity !== undefined ? clampParam('turbidity', Number(r.turbidity)) : null),
+    temperature: r.temperature !== undefined ? clampParam('temperature', Number(r.temperature)) : null,
+    conductivity: r.conductivity !== undefined ? clampParam('conductivity', Number(r.conductivity)) : null
   });
 
   return {

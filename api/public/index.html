@@ -39,6 +39,14 @@
             gap: 20px;
             margin-bottom: 20px;
         }
+
+        /* Desktop: make measurements wider than alerts to avoid visual overlap */
+        @media (min-width: 1000px) {
+            .grid {
+                grid-template-columns: 2fr 1fr;
+            }
+            .card.full-width { grid-column: 1 / -1; }
+        }
         
         .card {
             background: white;
@@ -46,6 +54,20 @@
             padding: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transition: transform 0.3s;
+        }
+        .card { box-sizing: border-box; }
+
+        /* Ensure non-full-width cards have enough space and internal scrolling */
+        /* Let cards grow to fit their content so all info is visible */
+        .grid { align-items: start; }
+        .card:not(.full-width) {
+            min-height: auto;
+            display: block;
+        }
+
+        #measurements, #alerts {
+            overflow-y: visible;
+            max-height: none;
         }
         
         .card:hover {
@@ -195,6 +217,10 @@
             border-radius: 5px;
             margin: 10px 0;
         }
+        /* Predictions table styles */
+        .predictions-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.9em; }
+        .predictions-table th, .predictions-table td { border: 1px solid #eee; padding: 6px; text-align: center; }
+        .pred-alert { background: #f8d7da; color: #a00; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -481,6 +507,9 @@
                             <label>WQI (24h):</label>
                             <canvas id="wqi-trend-${m.sensor_id}" width="240" height="50" style="border:1px solid #f1f1f1; display:block;"></canvas>
                         </div>
+                        <div class="sensor-data" id="predictions-${m.sensor_id}">
+                            <!-- predictions for this sensor will be rendered here -->
+                        </div>
                         <div class="sensor-data">
                             <label>Position:</label>
                             <span>${m.latitude.toFixed(4)}, ${m.longitude.toFixed(4)}</span>
@@ -506,6 +535,10 @@
                     // draw small trend charts for each sensor (non-blocking)
                     setTimeout(() => {
                         measurements.forEach(m => drawSmallTrend(m.sensor_id));
+                        // also fetch predictions and render per-sensor
+                        setTimeout(() => {
+                            measurements.forEach(m => fetchAndRenderPredictions(m.sensor_id));
+                        }, 80);
                     }, 50);
                 }, 100);
             }
@@ -544,6 +577,143 @@
                 // silent
             }
         }
+
+            // --- Predictions rendering and alert integration ---
+            const RECENT_ALERT_TTL_MS = 1000 * 60 * 60; // 1 hour dedupe window
+            const recentAlerts = {}; // key -> timestamp
+
+            async function fetchAndRenderPredictions(sensorId) {
+                const container = document.getElementById(`predictions-${sensorId}`);
+                if (!container) return;
+                container.innerHTML = '<div style="font-size:0.9em;color:#666;">Chargement des prévisions...</div>';
+                const token = localStorage.getItem('aw_token');
+                const headers = { 'Cache-Control': 'no-cache' };
+                if (token) headers['Authorization'] = 'Bearer ' + token;
+
+                try {
+                    const res = await fetch('http://localhost:3000/predictions', { headers });
+                    if (!res.ok) throw new Error('predictions fetch failed: ' + res.status);
+                    const j = await res.json();
+                    const rows = Array.isArray(j.data) ? j.data : [];
+                    // group rows by timestamp for this sensor
+                    const grouped = {};
+                    rows.forEach(r => {
+                        if (!r.sensor_id) return;
+                        if (r.sensor_id !== sensorId) return;
+                        const ts = r.timestamp;
+                        if (!grouped[ts]) grouped[ts] = { timestamp: ts };
+                        const p = (r.parameter || '').toString().toLowerCase();
+                        const v = Number(r.prediction);
+                        if (p === 'ph') grouped[ts].ph = v;
+                        else if (p === 'turbidity') grouped[ts].turbidity = v;
+                        else if (p === 'temperature') grouped[ts].temperature = v;
+                        else if (p === 'conductivity') grouped[ts].conductivity = v;
+                        else if (p === 'wqi') grouped[ts].wqi = v;
+                    });
+
+                    const list = Object.values(grouped).sort((a,b)=> (''+a.timestamp).localeCompare(''+b.timestamp));
+                    if (list.length === 0) {
+                        container.innerHTML = '<div style="color:#666;">Aucune prévision disponible</div>';
+                        return;
+                    }
+
+                    // show up to next 72 entries (24-72h depending on model)
+                    const windowed = list.slice(0, 72);
+
+                    // build table
+                    const tbl = document.createElement('table');
+                    tbl.className = 'predictions-table';
+                    tbl.innerHTML = `<thead><tr><th>Timestamp</th><th>pH</th><th>Turbidité</th><th>Température</th><th>Conductivité</th><th>WQI</th></tr></thead>`;
+                    const tb = document.createElement('tbody');
+
+                    const TH_WQI = 50; // threshold
+                    const TH_TURB = 5; // NTU
+
+                    // Helper: plausibility checks to avoid showing/alerting on outliers
+                    function isPlausible(param, v) {
+                        if (v === null || v === undefined || Number.isNaN(v)) return false;
+                        const pv = Number(v);
+                        if (!Number.isFinite(pv)) return false;
+                        const limits = {
+                            ph: [0,14],
+                            turbidity: [0,1000],
+                            temperature: [-50,60],
+                            conductivity: [0,10000],
+                            wqi: [0,100]
+                        };
+                        const p = (param||'').toLowerCase();
+                        if (!limits[p]) return true;
+                        return pv >= limits[p][0] && pv <= limits[p][1];
+                    }
+
+                    for (const row of windowed) {
+                        const tr = document.createElement('tr');
+                        const tcell = document.createElement('td');
+                        tcell.innerText = new Date(row.timestamp).toLocaleString();
+                        tr.appendChild(tcell);
+
+                        function addCell(val, param) {
+                            const td = document.createElement('td');
+                            if (!isPlausible(param, val)) {
+                                td.innerText = '—';
+                                return td;
+                            }
+                            const num = Math.round(Number(val)*100)/100;
+                            td.innerText = num;
+                            let isAlert = false;
+                            if (param === 'wqi' && num < TH_WQI) isAlert = true;
+                            if (param === 'turbidity' && num > TH_TURB) isAlert = true;
+                            if (isAlert) td.classList.add('pred-alert');
+                            return td;
+                        }
+
+                        tr.appendChild(addCell(row.ph, 'ph'));
+                        tr.appendChild(addCell(row.turbidity, 'turbidity'));
+                        tr.appendChild(addCell(row.temperature, 'temperature'));
+                        tr.appendChild(addCell(row.conductivity, 'conductivity'));
+                        tr.appendChild(addCell(row.wqi, 'wqi'));
+
+                        // check for alerts and post if needed
+                        const alertsToSend = [];
+                        if (typeof row.wqi === 'number' && row.wqi < TH_WQI) alertsToSend.push({ parameter: 'wqi', value: row.wqi, threshold: TH_WQI, severity: 'WARNING' });
+                        if (typeof row.turbidity === 'number' && row.turbidity > TH_TURB) alertsToSend.push({ parameter: 'turbidity', value: row.turbidity, threshold: TH_TURB, severity: 'WARNING' });
+
+                        if (alertsToSend.length > 0) {
+                            alertsToSend.forEach(a => {
+                                // Only send alert if the predicted value is plausible
+                                if (!isPlausible(a.parameter, a.value)) return;
+                                const key = `${sensorId}||${a.parameter}||${Math.round(a.value*100)/100}`;
+                                const now = Date.now();
+                                if (recentAlerts[key] && (now - recentAlerts[key] < RECENT_ALERT_TTL_MS)) return; // skip duplicate
+                                recentAlerts[key] = now;
+                                // fire-and-forget
+                                fetch('http://localhost:3000/alerts/create', {
+                                    method: 'POST',
+                                    headers: Object.assign({ 'Content-Type': 'application/json' }, (token ? { 'Authorization': 'Bearer ' + token } : {})),
+                                    body: JSON.stringify(Object.assign({ sensor_id: sensorId, timestamp: row.timestamp, message: `Predicted ${a.parameter}=${a.value}` }, a))
+                                }).then(r => r.json()).then(j => console.log('prediction-alert result', j)).catch(e => console.warn('prediction-alert failed', e));
+                            });
+                        }
+
+                        tb.appendChild(tr);
+                    }
+
+                    tbl.appendChild(tb);
+                    container.innerHTML = '';
+                    container.appendChild(tbl);
+
+                    // update small WQI indicator (first upcoming WQI)
+                    const nextWqi = windowed.find(r => typeof r.wqi === 'number');
+                    if (nextWqi) {
+                        const el = document.getElementById(`wqi-${sensorId}`);
+                        if (el) el.innerText = `${nextWqi.wqi} (prévu)`;
+                    }
+
+                } catch (err) {
+                    console.warn('fetchAndRenderPredictions error', err);
+                    container.innerHTML = '<div style="color:#999;">Erreur en chargeant les prévisions</div>';
+                }
+            }
         
         function displayAlerts(alerts) {
             const container = document.getElementById('alerts');

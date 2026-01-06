@@ -3,6 +3,8 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 const { getLatestMeasurements, getAlerts } = require('./db');
+// expose alerts DB insertion so dashboard can trigger alerts based on predictions
+const { insertAlert: insertAlertToDb } = require('../alerts/db');
 const { router: authRouter, verifyJWT } = require('./auth');
 const { computeWQI } = require('../lib/wqi');
 
@@ -74,6 +76,30 @@ app.get('/alerts', async (req, res) => {
       error: 'Erreur lors de la récupération des alertes',
       message: error.message,
     });
+  }
+});
+
+// Allow creating an alert record (used by dashboard when predicted values exceed thresholds)
+app.post('/alerts/create', async (req, res) => {
+  try {
+    const body = req.body || {};
+    if (!body.sensor_id || !body.parameter || typeof body.value === 'undefined') {
+      return res.status(400).json({ success: false, error: 'sensor_id, parameter and value required' });
+    }
+    const alert = {
+      sensor_id: body.sensor_id,
+      parameter: body.parameter,
+      value: Number(body.value),
+      threshold: typeof body.threshold !== 'undefined' ? Number(body.threshold) : 0,
+      severity: body.severity || 'WARNING',
+      message: body.message || `Predicted ${body.parameter} out of bounds: ${body.value}`,
+      timestamp: body.timestamp || new Date().toISOString(),
+    };
+    const result = await insertAlertToDb(alert);
+    return res.json({ success: true, id: result.id });
+  } catch (err) {
+    console.error('❌ /alerts/create error', err && err.message ? err.message : err);
+    return res.status(500).json({ success: false, error: err.message || String(err) });
   }
 });
 

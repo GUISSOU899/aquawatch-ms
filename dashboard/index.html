@@ -11,6 +11,7 @@
     table { width: 100%; border-collapse: collapse; margin-top: 10px; }
     th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
     th { background-color: #f0f0f0; }
+    /* predictions UI removed (not used in this project) */
   </style>
 </head>
 <body>
@@ -43,7 +44,8 @@
       <h3 id="info-title">Sensor details</h3>
       <div id="info-content">
         <div id="info-main"></div>
-        <canvas id="wqi-trend" width="480" height="120" style="border:1px solid #eee; margin-top:8px;"></canvas>
+          <canvas id="wqi-trend" width="480" height="120" style="border:1px solid #eee; margin-top:8px;"></canvas>
+        <!-- predictions UI removed -->
       </div>
     </div>
   </div>
@@ -201,6 +203,8 @@
       } catch (e) {
         console.error('Error fetching forecast for trend:', e);
       }
+
+      // predictions UI removed in this file (not in use)
     }
 
     function drawTrend(points) {
@@ -236,6 +240,8 @@
         ctx.beginPath(); ctx.arc(x,y,3,0,Math.PI*2); ctx.fill();
       });
     }
+
+    // predictions UI removed from this file
 
     function classifyWQI(v) {
       if (!isFinite(v)) return null;
